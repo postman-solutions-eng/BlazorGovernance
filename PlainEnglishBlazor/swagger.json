@@ -54,6 +54,7 @@
         "tags": [
           "Weather"
         ],
+        "summary": "Gets List of Weather Forecastss",
         "responses": {
           "200": {
             "description": "Success",

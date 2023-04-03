@@ -24,7 +24,9 @@ namespace PlainEnglishBlazor.Business.ApiControllers
 
             return Ok(forecasts);
         }
-
+        /// <summary>
+        /// Gets List of Weather Forecastss
+        /// </summary>
         [Route("getwithoutsummary")]
         [HttpGet]
         public async Task<ActionResult<List<WeatherForecast>>> GetWithoutSummary()

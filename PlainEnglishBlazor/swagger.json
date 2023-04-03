@@ -54,7 +54,6 @@
         "tags": [
           "Weather"
         ],
-        "summary": "Gets List of Weather Forecasts Without Summary",
         "responses": {
           "200": {
             "description": "Success",

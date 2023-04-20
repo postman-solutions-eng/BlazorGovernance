@@ -18,6 +18,8 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// </summary>
         [Route("get")]
         [HttpGet]
+        [ProducesResponseType(typeof(WeatherForecast), 200)]
+        [ProducesResponseType(typeof(Error), 500)]
         public async Task<ActionResult<List<WeatherForecast>>> Get()
         {
             var forecasts = await _weather.GetForecastsAsync();

@@ -12,9 +12,9 @@ services.AddServerSideBlazor();
 services.AddScoped<WeatherForecastService>();
 services.AddControllers();
 services.AddEndpointsApiExplorer();
-services.AddSwaggerGen(c =>
+services.AddSwaggerGen(options =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { 
+    options.SwaggerDoc("v1", new OpenApiInfo { 
         Title = "My API", 
         Version = "v1", 
         Contact = new OpenApiContact
@@ -25,7 +25,7 @@ services.AddSwaggerGen(c =>
         },
     });
 
-    c.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
+    options.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
     {
         Name = "Authorization",
         Description = "Enter the Bearer Authorization string as following: `Bearer Generated-JWT-Token`",
@@ -34,27 +34,26 @@ services.AddSwaggerGen(c =>
         Scheme = "Bearer"
     });
 
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-{
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
-        new OpenApiSecurityScheme
         {
-            Name = "Bearer",
-            In = ParameterLocation.Header,
-            Reference = new OpenApiReference
+            new OpenApiSecurityScheme
             {
-                Id = "Bearer",
-                Type = ReferenceType.SecurityScheme
-            }
-        },
-        new List<string>()
-    }
-
-});
+                Name = "Bearer",
+                In = ParameterLocation.Header,
+                Reference = new OpenApiReference
+                {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            },
+            new List<string>()
+        }
+    });
 
     // using System.Reflection;
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 // Application Builder

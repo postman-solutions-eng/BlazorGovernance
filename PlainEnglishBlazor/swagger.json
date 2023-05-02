@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "My API",
+    "title": "Postman Example API",
     "contact": {
-      "name": "Example Contact",
+      "name": "Garrett London",
       "url": "https://example.com/contact",
-      "email": "example@postman.com"
+      "email": "garrett.london@postman.com"
     },
     "version": "v1"
   },
@@ -36,26 +36,39 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
+          }
+        }
+      }
+    },
+    "/api/Weather/create": {
+      "post": {
+        "tags": [
+          "Weather"
+        ],
+        "summary": "Create Weather Forecasts",
+        "requestBody": {
+          "description": "WeatherForeCast object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WeatherForecast"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WeatherForecast"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WeatherForecast"
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -102,16 +115,6 @@
   },
   "components": {
     "schemas": {
-      "Error": {
-        "type": "object",
-        "properties": {
-          "errorMessage": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "WeatherForecast": {
         "required": [
           "temperatureC"
@@ -128,6 +131,7 @@
           },
           "temperatureC": {
             "type": "integer",
+            "description": "The temperature of the forecast in ISO-whatever format",
             "format": "int32"
           },
           "temperatureF": {
@@ -136,7 +140,10 @@
             "readOnly": true
           },
           "summary": {
+            "maxLength": 300,
+            "minLength": 30,
             "type": "string",
+            "description": "The summary of the weather",
             "nullable": true
           }
         },

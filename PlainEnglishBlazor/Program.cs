@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PlainEnglishBlazor.Business;
+using PlainEnglishBlazor.Shared.Models;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,12 +16,12 @@ services.AddEndpointsApiExplorer();
 services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { 
-        Title = "My API", 
+        Title = "Postman Example API", 
         Version = "v1", 
         Contact = new OpenApiContact
         {
-            Name = "Example Contact",
-            Email= "example@postman.com",
+            Name = "Garrett London",
+            Email= "garrett.london@postman.com",
             Url = new Uri("https://example.com/contact")
         },
     });
@@ -54,6 +55,10 @@ services.AddSwaggerGen(options =>
     // using System.Reflection;
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+
+    var modelAssembly = typeof(Error).Assembly;
+    var modelsXmlDocPath = Path.Combine(AppContext.BaseDirectory, $"{modelAssembly.GetName().Name}.xml");
+    options.IncludeXmlComments(modelsXmlDocPath);
 });
 
 // Application Builder

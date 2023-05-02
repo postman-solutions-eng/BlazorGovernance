@@ -11,7 +11,7 @@
 			"name": "Weather",
 			"item": [
 				{
-					"name": "Gets List of Weather Forecasts",
+					"name": "List Weather Forecasts",
 					"id": "9dc7090b-7313-4d4b-8cf3-49f250ba034b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -667,7 +667,8 @@
 		{
 			"id": "9f66d7d8-149b-4118-99a6-23f3357e47a7",
 			"key": "baseUrl",
-			"value": "https://localhost:61148"
+			"value": "https://localhost:61148",
+			"type": "any"
 		}
 	]
 }

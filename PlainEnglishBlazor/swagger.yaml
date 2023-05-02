@@ -24,7 +24,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/WeatherForecast'
-              example: [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test 1"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2"}]
+              example: [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test 1","website":"https://www.dotnet.microsoft.com"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2","website":"https://www.dotnet.microsoft.com"}]
         '500':
           description: This is an example of an error response
         '404':
@@ -75,10 +75,12 @@ components:
         date:
           type: string
           format: date-time
+          example: '2023-01-01T00:00:00'
         temperatureC:
           type: integer
           description: The temperature of the forecast in ISO-whatever format
           format: int32
+          example: 32.8
         temperatureF:
           type: integer
           description: Autocalculated farenheit temperature.
@@ -90,6 +92,13 @@ components:
           type: string
           description: 'The summary of the weather (cold, hot)'
           nullable: true
+          example: This is the summary for the weather
+        website:
+          type: string
+          description: The URL for the weather. Must be valid.
+          format: uri
+          nullable: true
+          example: https://www.bing.com
       additionalProperties: false
   securitySchemes:
     Bearer:
@@ -100,4 +109,4 @@ components:
 security:
   - Bearer: [ ]
 x-postman-custom:
-  address: http://some.backend.url
+  address: https://postman.com

@@ -12,7 +12,7 @@ namespace PlainEnglishBlazor.Config
         {
             swaggerDoc.AddExtension("x-postman-custom", new OpenApiObject
             {
-                ["address"] = new OpenApiString("http://some.backend.url")
+                ["address"] = new OpenApiString("https://postman.com")
             });
         }
     }

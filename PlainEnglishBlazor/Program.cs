@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PlainEnglishBlazor.Business;
 using PlainEnglishBlazor.Config;
@@ -15,6 +14,8 @@ services.AddServerSideBlazor();
 services.AddScoped<WeatherForecastService>();
 services.AddControllers();
 services.AddEndpointsApiExplorer();
+
+// Swagger Gen
 services.AddSwaggerGen(options =>
 {
     options.ExampleFilters();
@@ -34,8 +35,6 @@ services.AddSwaggerGen(options =>
             Url = new Uri("https://example.com/contact")
         },
     });
-
-    options.CustomOperationIds(e => $"{e.ActionDescriptor.RouteValues["action"]}");
 
     options.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
     {
@@ -63,7 +62,6 @@ services.AddSwaggerGen(options =>
         }
     });
 
-    // using System.Reflection;
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 
@@ -71,7 +69,7 @@ services.AddSwaggerGen(options =>
     var modelsXmlDocPath = Path.Combine(AppContext.BaseDirectory, $"{modelAssembly.GetName().Name}.xml");
     options.IncludeXmlComments(modelsXmlDocPath);
 
-
+    options.CustomOperationIds(e => $"{e.ActionDescriptor.RouteValues["action"]}");
     options.OperationFilter<ErrorOperationFilter>();
     options.DocumentFilter<CustomDocumentFilter>();
 });
@@ -80,11 +78,14 @@ services.AddSwaggerExamplesFromAssemblyOf(typeof(WeatherExamples));
 
 // Application Builder
 var app = builder.Build();
+
+// Swagger UI
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

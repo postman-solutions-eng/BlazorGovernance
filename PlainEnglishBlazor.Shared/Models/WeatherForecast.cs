@@ -1,8 +1,6 @@
 using Swashbuckle.AspNetCore.Filters;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.Metrics;
-
 namespace PlainEnglishBlazor.Shared.Models
 {
     public class WeatherForecast
@@ -10,24 +8,26 @@ namespace PlainEnglishBlazor.Shared.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        /// <example>2023-01-01T00:00:00</example>
         public DateTime Date { get; set; }
 
-        /// <summary>
-        /// The temperature of the forecast in ISO-whatever format
-        /// </summary>
+        /// <summary>The temperature of the forecast in ISO-whatever format</summary>
+        /// <example>32.8</example>
         [Required]
         public int TemperatureC { get; set; }
 
-        /// <summary>
-        /// Autocalculated farenheit temperature.
-        /// </summary>
+        /// <summary>Autocalculated farenheit temperature.</summary>
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        /// <summary>
-        /// The summary of the weather (cold, hot)
-        /// </summary>
+        /// <summary> The summary of the weather (cold, hot) </summary>
+        /// <example>This is the summary for the weather</example>
         [StringLength(300, MinimumLength = 3)]
         public string? Summary { get; set; }
+
+        /// <summary>The URL for the weather. Must be valid.</summary>
+        /// <example>https://www.bing.com</example>
+        [Url]
+        public string? Website { get; set; }
     }
 
     public class WeatherExamples : IExamplesProvider<List<WeatherForecast>>
@@ -36,8 +36,20 @@ namespace PlainEnglishBlazor.Shared.Models
         {
             return new List<WeatherForecast>
             {
-                new WeatherForecast { Id = 1, Date = new DateTime(2023, 1, 1), TemperatureC=32, Summary = "Test 1" },
-                new WeatherForecast { Id = 2, Date= new DateTime(2023, 1, 2), TemperatureC=34, Summary = "Test 2" }
+                new WeatherForecast { 
+                    Id = 1, 
+                    Date = new DateTime(2023, 1, 1), 
+                    TemperatureC=32, 
+                    Summary = "Test 1",
+                    Website = "https://www.dotnet.microsoft.com"
+                },
+                new WeatherForecast { 
+                    Id = 2, 
+                    Date= new DateTime(2023, 1, 2), 
+                    TemperatureC=34, 
+                    Summary = "Test 2",
+                    Website = "https://www.dotnet.microsoft.com"
+                }
             };
         }
     }

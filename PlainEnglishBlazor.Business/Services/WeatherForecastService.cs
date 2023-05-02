@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using PlainEnglishBlazor.DataAccess.Database;
 using PlainEnglishBlazor.Shared.Models;
 using RestSharp;
-using System.Text.Json.Serialization;
 
 namespace PlainEnglishBlazor.Business
 {
@@ -31,12 +30,12 @@ namespace PlainEnglishBlazor.Business
         {
             if (mock)
             {
-                var options = new RestClientOptions("https://d0c0381d-ca2d-4b35-838b-f0d312bfabf3.mock.pstmn.io")
+                var options = new RestClientOptions("https://d925d076-5fcc-4f27-a6b7-32c009ecfc13.mock.pstmn.io")
                 {
                     MaxTimeout = -1,
                 };
                 var client = new RestClient(options);
-                var request = new RestRequest("/api/Weather/getwithoutsummary", Method.Get);
+                var request = new RestRequest("/api/Weather/get", Method.Get);
                 RestResponse response = await client.ExecuteAsync(request);
                 
                 return JsonConvert.DeserializeObject<List<WeatherForecast>>(response.Content!)!;

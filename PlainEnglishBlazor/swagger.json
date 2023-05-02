@@ -120,13 +120,14 @@
             "type": "integer",
             "description": "The temperature of the forecast in ISO-whatever format",
             "format": "int32",
-            "example": 32.8
+            "example": 32
           },
           "temperatureF": {
             "type": "integer",
             "description": "Autocalculated farenheit temperature.",
             "format": "int32",
-            "readOnly": true
+            "readOnly": true,
+            "example": 32
           },
           "summary": {
             "maxLength": 300,

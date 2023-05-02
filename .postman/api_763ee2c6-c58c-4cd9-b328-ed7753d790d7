@@ -9,6 +9,7 @@ id = 763ee2c6-c58c-4cd9-b328-ed7753d790d7
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"20467433-9c38b264-f82a-4b55-8ebb-05938566f037","path":"Weather Collection.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Example\",\"folderStrategy\":\"Tags\",\"includeAuthInfoInExample\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\"}"}}
 
 [config.relations.collections.metaData]
 

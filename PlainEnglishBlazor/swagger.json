@@ -102,7 +102,7 @@
         "tags": [
           "Weather"
         ],
-        "summary": "Gets List of Weather Forecastss",
+        "summary": "Gets List of Weather Forecasts",
         "responses": {
           "200": {
             "description": "Success",

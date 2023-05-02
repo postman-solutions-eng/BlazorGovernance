@@ -21,6 +21,6 @@
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="postman login --with-api-key $(PostmanAPI)" />
-		<Exec Command="postman api lint ../PlainEnglishBlazor/swagger.json" />
+		<Exec Command="postman api lint ../PlainEnglishBlazor/swagger.yaml" />
 	</Target>
 </Project>

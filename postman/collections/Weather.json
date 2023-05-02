@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "7c6d908a-493d-4033-8764-aa59a43b3cff",
+		"name": "Weather",
+		"description": "Contact Support:\n Name: Garrett London\n Email: garrett.london@postman.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "20467433-7c6d908a-493d-4033-8764-aa59a43b3cff"
+	},
+	"item": [
+		{
+			"name": "Weather",
+			"item": [
+				{
+					"name": "Gets List of Weather Forecasts",
+					"id": "9477be14-ce17-453a-ad5d-d63ea48491a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Weather/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Weather",
+								"get"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b14a3d69-7afe-440c-99c6-26f2cd5510ad",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/get",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"get"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\"\n  }\n]"
+						},
+						{
+							"id": "af87a374-20f6-42e0-a711-1879dfb33905",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/get",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"get"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "74753283-9cdb-43cd-855d-991a24aeb364",
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/get",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"get"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "2e908f2f-6e89-444b-8b08-787fc0cdb9df",
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/get",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"get"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "7956c209-61bb-4d10-9002-b94fead2cf13",
+							"name": "This is an example of an error response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/get",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"get"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Create Weather Forecasts",
+					"id": "5d9bf1ca-eef1-4b96-b551-ac747de82dcb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"temperatureC\": 81016452,\n  \"id\": 25800779,\n  \"date\": \"1970-10-23T09:49:56.342Z\",\n  \"temperatureF\": 28734094,\n  \"summary\": \"laborum culpa sit ut non\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Weather/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Weather",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "4462540f-b858-48a7-9cd4-dd4bc15955a6",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"temperatureC\": 81016452,\n  \"id\": 25800779,\n  \"date\": \"1970-10-23T09:49:56.342Z\",\n  \"temperatureF\": 28734094,\n  \"summary\": \"laborum culpa sit ut non\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "83787685-fda2-45e3-8a25-28cde99ae89e",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"temperatureC\": 81016452,\n  \"id\": 25800779,\n  \"date\": \"1970-10-23T09:49:56.342Z\",\n  \"temperatureF\": 28734094,\n  \"summary\": \"laborum culpa sit ut non\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"create"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "4cb8913d-52bb-4422-8b53-82ac79d87bc3",
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"temperatureC\": 81016452,\n  \"id\": 25800779,\n  \"date\": \"1970-10-23T09:49:56.342Z\",\n  \"temperatureF\": 28734094,\n  \"summary\": \"laborum culpa sit ut non\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"create"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "01418e4d-ae69-4ae5-b32f-810a5fb45dda",
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"temperatureC\": 81016452,\n  \"id\": 25800779,\n  \"date\": \"1970-10-23T09:49:56.342Z\",\n  \"temperatureF\": 28734094,\n  \"summary\": \"laborum culpa sit ut non\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"create"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "f2179058-01d4-4905-9f0b-380c9174f748",
+							"name": "This is an example of an error response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"temperatureC\": 81016452,\n  \"id\": 25800779,\n  \"date\": \"1970-10-23T09:49:56.342Z\",\n  \"temperatureF\": 28734094,\n  \"summary\": \"laborum culpa sit ut non\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"create"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Gets List of Weather Forecasts",
+					"id": "8793f0d7-1b5c-49e9-bab8-b3b15c05d540",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Weather/getwithoutsummary",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Weather",
+								"getwithoutsummary"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "29739c22-10da-4eb2-8867-c824de5fd943",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/getwithoutsummary",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"getwithoutsummary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\"\n  }\n]"
+						},
+						{
+							"id": "70e93426-91c3-4058-b378-516b9ba8149b",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/getwithoutsummary",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"getwithoutsummary"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "d47f8fc8-e495-4ec4-aef7-0b12293613b2",
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/getwithoutsummary",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"getwithoutsummary"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "8eaadbf6-8b61-43bc-b87a-e2a3b32def2f",
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/getwithoutsummary",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"getwithoutsummary"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "ac34b561-3f24-4443-b79e-f2eb66482423",
+							"name": "This is an example of an error response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Weather/getwithoutsummary",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Weather",
+										"getwithoutsummary"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "2bfc11dc-d7af-4705-a549-d023718256c3"
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "b074e3a9-7cb3-4a25-a862-7d8bccaeaa36",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}

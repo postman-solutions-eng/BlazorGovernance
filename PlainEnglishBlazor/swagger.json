@@ -1,0 +1,167 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Postman Example API",
+    "contact": {
+      "name": "Garrett London",
+      "url": "https://example.com/contact",
+      "email": "garrett.london@postman.com"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:61148"
+    }
+  ],
+  "paths": {
+    "/api/Weather/get": {
+      "get": {
+        "tags": [
+          "Weather"
+        ],
+        "summary": "Get Weather Forecasts",
+        "operationId": "GetWeatherForecasts",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                },
+                "example": [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test 1","website":"https://www.dotnet.microsoft.com"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2","website":"https://www.dotnet.microsoft.com"}]
+              }
+            }
+          },
+          "500": {
+            "description": "This is an example of an error response"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/Weather/create": {
+      "post": {
+        "tags": [
+          "Weather"
+        ],
+        "summary": "Create Weather Forecasts",
+        "operationId": "CreateWeatherForecasts",
+        "requestBody": {
+          "description": "The Weather Forecast object represents the daily forecast in the requested weather location.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WeatherForecast"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WeatherForecast"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WeatherForecast"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "This is an example of an error response"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "WeatherForecast": {
+        "required": [
+          "temperatureC"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-01-01T00:00:00"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "description": "The temperature of the forecast in ISO-whatever format",
+            "format": "int32",
+            "example": 32.8
+          },
+          "temperatureF": {
+            "type": "integer",
+            "description": "Autocalculated farenheit temperature.",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "maxLength": 300,
+            "minLength": 3,
+            "type": "string",
+            "description": "The summary of the weather (cold, hot)",
+            "nullable": true,
+            "example": "This is the summary for the weather"
+          },
+          "website": {
+            "type": "string",
+            "description": "The URL for the weather. Must be valid.",
+            "format": "uri",
+            "nullable": true,
+            "example": "https://www.bing.com"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Enter the Bearer Authorization string as following: `Bearer Generated-JWT-Token`",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ],
+  "x-postman-custom": {
+    "address": "https://postman.com"
+  }
+}

@@ -20,7 +20,9 @@
   </ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="dotnet tool restore" />
+		<Exec Command="dotnet swagger tofile --output ../PlainEnglishBlazor/swagger.json $(OutputPath)PlainEnglishBlazor.dll v1 " />
 		<Exec Command="postman login --with-api-key $(PostmanAPI)" />
-		<Exec Command="postman api lint ../PlainEnglishBlazor/swagger.yaml" />
+		<Exec Command="postman api lint ../PlainEnglishBlazor/swagger.json" />
 	</Target>
 </Project>

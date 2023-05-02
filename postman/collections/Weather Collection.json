@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "9dc7a2e5-0fa4-4bb1-a31a-1d6a897f720e",
-		"name": "Weather",
+		"_postman_id": "37707af6-70cf-4028-92a1-6f0ccea0dd24",
+		"name": "Weather Collection",
 		"description": "Contact Support:\n Name: Garrett London\n Email: garrett.london@postman.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "20467433-9dc7a2e5-0fa4-4bb1-a31a-1d6a897f720e"
+		"_uid": "20467433-37707af6-70cf-4028-92a1-6f0ccea0dd24"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "List Weather Forecasts",
-					"id": "9dc7090b-7313-4d4b-8cf3-49f250ba034b",
+					"id": "33f06b13-3178-43a9-9a8b-a5f230004e13",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -38,7 +38,7 @@
 					},
 					"response": [
 						{
-							"id": "9b6c1670-c2a4-4528-9f7f-c890cc30df78",
+							"id": "e8a0382f-5e4b-4641-9080-8a96e88a13bb",
 							"name": "Success",
 							"originalRequest": {
 								"method": "GET",
@@ -74,7 +74,7 @@
 							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test 1\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\"\n  }\n]"
 						},
 						{
-							"id": "9ec62f66-8995-4f54-a02a-3bf199eedc91",
+							"id": "35325afb-0aeb-466e-8e55-a44cafe2d638",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "GET",
@@ -104,7 +104,7 @@
 							"cookie": []
 						},
 						{
-							"id": "8873feca-3231-4314-8184-d3693a7acc52",
+							"id": "7d7bd92a-56f9-405f-a85a-08d5f8b225d4",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -134,7 +134,7 @@
 							"cookie": []
 						},
 						{
-							"id": "97eda374-0c4c-4b73-bca4-24ab494bacde",
+							"id": "5bd06425-30a4-4971-8702-7a8698337c18",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "GET",
@@ -164,7 +164,7 @@
 							"cookie": []
 						},
 						{
-							"id": "ae34781b-c696-44f2-b535-9d5f079adfa4",
+							"id": "f4ae2719-bac9-4bd7-8edd-2479db1a8f95",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "GET",
@@ -197,7 +197,7 @@
 				},
 				{
 					"name": "Create Weather Forecasts",
-					"id": "6509c829-32da-4f9d-a6f6-2c24221a9571",
+					"id": "cc004360-6014-44b0-ba44-38329bc020a2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -211,7 +211,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"temperatureC\": 36853335,\n  \"id\": -79227228,\n  \"date\": \"2013-09-19T00:13:56.853Z\",\n  \"temperatureF\": 34523397,\n  \"summary\": \"exercitation et\"\n}",
+							"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -233,7 +233,7 @@
 					},
 					"response": [
 						{
-							"id": "f2d488ac-bbde-4ab3-8afe-1248f5dc717f",
+							"id": "4adca130-a283-4b6c-9e7e-48dc862aa306",
 							"name": "Success",
 							"originalRequest": {
 								"method": "POST",
@@ -250,7 +250,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 36853335,\n  \"id\": -79227228,\n  \"date\": \"2013-09-19T00:13:56.853Z\",\n  \"temperatureF\": 34523397,\n  \"summary\": \"exercitation et\"\n}",
+									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -277,7 +277,7 @@
 							"cookie": []
 						},
 						{
-							"id": "0fd71d06-7627-45cb-861f-b6b955fa6dac",
+							"id": "8cf50478-814f-48b6-87ef-b5a67b90cacd",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "POST",
@@ -294,7 +294,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 36853335,\n  \"id\": -79227228,\n  \"date\": \"2013-09-19T00:13:56.853Z\",\n  \"temperatureF\": 34523397,\n  \"summary\": \"exercitation et\"\n}",
+									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -321,7 +321,7 @@
 							"cookie": []
 						},
 						{
-							"id": "c69515a9-7c2d-409e-8a1e-792c5b465c84",
+							"id": "2f6d7a04-af27-46da-9e7b-f99603b9ced3",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "POST",
@@ -338,7 +338,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 36853335,\n  \"id\": -79227228,\n  \"date\": \"2013-09-19T00:13:56.853Z\",\n  \"temperatureF\": 34523397,\n  \"summary\": \"exercitation et\"\n}",
+									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -365,7 +365,7 @@
 							"cookie": []
 						},
 						{
-							"id": "b075f49e-bf98-4a83-bc92-62f43c7ee99b",
+							"id": "a94dfc1c-06a3-4f2c-96b8-4f1e185e3eff",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "POST",
@@ -382,7 +382,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 36853335,\n  \"id\": -79227228,\n  \"date\": \"2013-09-19T00:13:56.853Z\",\n  \"temperatureF\": 34523397,\n  \"summary\": \"exercitation et\"\n}",
+									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -409,7 +409,7 @@
 							"cookie": []
 						},
 						{
-							"id": "6ddc812b-f1a0-404a-95dc-8e062821e4e5",
+							"id": "9fae6834-cb93-42a3-b6b9-3cc1c5418e31",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "POST",
@@ -426,7 +426,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 36853335,\n  \"id\": -79227228,\n  \"date\": \"2013-09-19T00:13:56.853Z\",\n  \"temperatureF\": 34523397,\n  \"summary\": \"exercitation et\"\n}",
+									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -456,7 +456,7 @@
 				},
 				{
 					"name": "Gets List of Weather Forecasts",
-					"id": "a8d0e475-31fc-4d88-a83c-c7d171c091f8",
+					"id": "4b506ee5-1d5c-4de0-86ab-8ccab1d4eb65",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -482,7 +482,7 @@
 					},
 					"response": [
 						{
-							"id": "2eb8bfda-0249-4532-9035-33ca37c5fe81",
+							"id": "493d9e6d-f1ff-46ff-8acc-6a25fd9315b2",
 							"name": "Success",
 							"originalRequest": {
 								"method": "GET",
@@ -518,7 +518,7 @@
 							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test 1\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\"\n  }\n]"
 						},
 						{
-							"id": "1593d79c-3fe1-402d-97a5-7bcdd555e576",
+							"id": "77a9f48c-1faf-48c7-9a87-270b284b4465",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "GET",
@@ -548,7 +548,7 @@
 							"cookie": []
 						},
 						{
-							"id": "718931b5-4e8e-4f08-b9ff-cb299f407feb",
+							"id": "fdce578f-e822-4fcc-82a6-aa6fdfea17b1",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -578,7 +578,7 @@
 							"cookie": []
 						},
 						{
-							"id": "34b44e57-8bd0-4e9a-b359-555fa53c607c",
+							"id": "e6797dd6-eda7-4a2a-b399-0768e51ed067",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "GET",
@@ -608,7 +608,7 @@
 							"cookie": []
 						},
 						{
-							"id": "66972ab0-b9b2-415d-9298-0aa94dc4a994",
+							"id": "4e3b14b8-0ca7-414c-9afd-b27027291843",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "GET",
@@ -640,7 +640,7 @@
 					]
 				}
 			],
-			"id": "0175e1a8-6307-4c6f-ae98-300f9939a851"
+			"id": "0d550006-66be-4996-92f2-26ce5f847d9e"
 		}
 	],
 	"auth": {
@@ -665,10 +665,9 @@
 	},
 	"variable": [
 		{
-			"id": "9f66d7d8-149b-4118-99a6-23f3357e47a7",
+			"id": "e74c8b73-8af6-4448-b044-7972f53edacc",
 			"key": "baseUrl",
-			"value": "https://localhost:61148",
-			"type": "any"
+			"value": "https://localhost:61148"
 		}
 	]
 }

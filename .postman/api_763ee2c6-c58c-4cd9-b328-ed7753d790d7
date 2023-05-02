@@ -9,15 +9,15 @@ id = 763ee2c6-c58c-4cd9-b328-ed7753d790d7
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"20467433-9dc7a2e5-0fa4-4bb1-a31a-1d6a897f720e","path":"Weather.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Example\",\"folderStrategy\":\"Tags\",\"includeAuthInfoInExample\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\"}"}}
+files[] = {"id":"20467433-37707af6-70cf-4028-92a1-6f0ccea0dd24","path":"Weather Collection.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Example\",\"folderStrategy\":\"Tags\",\"includeAuthInfoInExample\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\"}"}}
 
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
 rootDirectory = PlainEnglishBlazor
 files[] = {"path":"Properties/launchSettings.json","metaData":{}}
-files[] = {"path":"swagger.json","metaData":{}}
+files[] = {"path":"swagger.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
-rootFiles[] = swagger.json
+rootFiles[] = swagger.yaml
 type = openapi:3

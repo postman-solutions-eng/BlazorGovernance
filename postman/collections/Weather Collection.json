@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "37707af6-70cf-4028-92a1-6f0ccea0dd24",
+		"_postman_id": "a10e163b-d882-4afb-b00f-f50a56b63b5a",
 		"name": "Weather Collection",
 		"description": "Contact Support:\n Name: Garrett London\n Email: garrett.london@postman.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "20467433-37707af6-70cf-4028-92a1-6f0ccea0dd24"
+		"_uid": "20467433-a10e163b-d882-4afb-b00f-f50a56b63b5a"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "List Weather Forecasts",
-					"id": "33f06b13-3178-43a9-9a8b-a5f230004e13",
+					"id": "e38607c7-d2e8-44da-8b87-49f32f461c3f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -38,7 +38,7 @@
 					},
 					"response": [
 						{
-							"id": "e8a0382f-5e4b-4641-9080-8a96e88a13bb",
+							"id": "5dfd4d1a-9ea2-4ab1-9652-956c0ba1bb5c",
 							"name": "Success",
 							"originalRequest": {
 								"method": "GET",
@@ -71,10 +71,10 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test 1\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test 1\",\n    \"website\": \"https://www.dotnet.microsoft.com\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\",\n    \"website\": \"https://www.dotnet.microsoft.com\"\n  }\n]"
 						},
 						{
-							"id": "35325afb-0aeb-466e-8e55-a44cafe2d638",
+							"id": "b779ee37-3d6e-44db-9df4-7bf3be870f2e",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "GET",
@@ -104,7 +104,7 @@
 							"cookie": []
 						},
 						{
-							"id": "7d7bd92a-56f9-405f-a85a-08d5f8b225d4",
+							"id": "96993dbd-7607-4113-9bf7-7191f88439ad",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -134,7 +134,7 @@
 							"cookie": []
 						},
 						{
-							"id": "5bd06425-30a4-4971-8702-7a8698337c18",
+							"id": "09558bb6-ad56-43f7-a025-2a591cdbfb39",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "GET",
@@ -164,7 +164,7 @@
 							"cookie": []
 						},
 						{
-							"id": "f4ae2719-bac9-4bd7-8edd-2479db1a8f95",
+							"id": "77179559-2e76-442c-9b28-fb4b69a5ca2a",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "GET",
@@ -197,7 +197,7 @@
 				},
 				{
 					"name": "Create Weather Forecasts",
-					"id": "cc004360-6014-44b0-ba44-38329bc020a2",
+					"id": "ef045b90-5f9e-4816-824e-a7b2e281ede9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -211,7 +211,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
+							"raw": "{\n  \"temperatureC\": 21587148,\n  \"id\": 72105800,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 21839512,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -233,7 +233,7 @@
 					},
 					"response": [
 						{
-							"id": "4adca130-a283-4b6c-9e7e-48dc862aa306",
+							"id": "6193e466-664e-44c8-a307-3e6956a3557c",
 							"name": "Success",
 							"originalRequest": {
 								"method": "POST",
@@ -250,7 +250,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
+									"raw": "{\n  \"temperatureC\": 21587148,\n  \"id\": 72105800,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 21839512,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -277,7 +277,7 @@
 							"cookie": []
 						},
 						{
-							"id": "8cf50478-814f-48b6-87ef-b5a67b90cacd",
+							"id": "d5519590-55a3-437f-979a-2424ad287e16",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "POST",
@@ -294,7 +294,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
+									"raw": "{\n  \"temperatureC\": 21587148,\n  \"id\": 72105800,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 21839512,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -321,7 +321,7 @@
 							"cookie": []
 						},
 						{
-							"id": "2f6d7a04-af27-46da-9e7b-f99603b9ced3",
+							"id": "a1c9c977-c85b-4f98-9c97-ec283befe8b2",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "POST",
@@ -338,7 +338,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
+									"raw": "{\n  \"temperatureC\": 21587148,\n  \"id\": 72105800,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 21839512,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -365,7 +365,7 @@
 							"cookie": []
 						},
 						{
-							"id": "a94dfc1c-06a3-4f2c-96b8-4f1e185e3eff",
+							"id": "e253e4b2-ccfb-42d4-8e86-04787632ece5",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "POST",
@@ -382,7 +382,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
+									"raw": "{\n  \"temperatureC\": 21587148,\n  \"id\": 72105800,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 21839512,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -409,7 +409,7 @@
 							"cookie": []
 						},
 						{
-							"id": "9fae6834-cb93-42a3-b6b9-3cc1c5418e31",
+							"id": "645d1fb8-69b9-4355-a7cf-ab49f3ab7c44",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "POST",
@@ -426,7 +426,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"temperatureC\": 37727687,\n  \"id\": 65489511,\n  \"date\": \"2009-09-07T06:58:59.882Z\",\n  \"temperatureF\": -30442664,\n  \"summary\": \"eiusmod Duis cillum qui minim\"\n}",
+									"raw": "{\n  \"temperatureC\": 21587148,\n  \"id\": 72105800,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 21839512,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -455,7 +455,7 @@
 					]
 				}
 			],
-			"id": "0d550006-66be-4996-92f2-26ce5f847d9e"
+			"id": "b7e94b8c-01bc-4548-9178-d41008bb295d"
 		}
 	],
 	"auth": {
@@ -480,10 +480,9 @@
 	},
 	"variable": [
 		{
-			"id": "e74c8b73-8af6-4448-b044-7972f53edacc",
+			"id": "51017674-b909-41fd-86a8-e70f69a92b37",
 			"key": "baseUrl",
-			"value": "https://localhost:61148",
-			"type": "any"
+			"value": "https://localhost:61148"
 		}
 	]
 }

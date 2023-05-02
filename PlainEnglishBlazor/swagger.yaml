@@ -14,6 +14,7 @@ paths:
       tags:
         - Weather
       summary: List Weather Forecasts
+      operationId: GetWeatherForecasts
       responses:
         '200':
           description: Success
@@ -37,6 +38,7 @@ paths:
       tags:
         - Weather
       summary: Create Weather Forecasts
+      operationId: CreateWeatherForecasts
       requestBody:
         description: The Weather Forecast object represents the daily forecast in the requested weather location.
         content:
@@ -52,29 +54,6 @@ paths:
       responses:
         '200':
           description: Success
-        '500':
-          description: This is an example of an error response
-        '404':
-          description: Not Found
-        '401':
-          description: Unauthorized
-        '403':
-          description: Forbidden
-  /api/Weather/getwithoutsummary:
-    get:
-      tags:
-        - Weather
-      summary: Gets List of Weather Forecasts
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/WeatherForecast'
-              example: [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test 1"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2"}]
         '500':
           description: This is an example of an error response
         '404':

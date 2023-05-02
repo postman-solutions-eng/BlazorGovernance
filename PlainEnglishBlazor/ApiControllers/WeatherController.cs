@@ -21,7 +21,7 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         [Route("get")]
         [Produces("application/json")]
         [HttpGet]
-        public async Task<ActionResult<List<WeatherForecast>>> Get()
+        public async Task<ActionResult<List<WeatherForecast>>> GetWeatherForecasts()
         {
             var forecasts = await _weather.GetForecastsAsync(false);
 
@@ -34,22 +34,9 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// <param name="forecast">The Weather Forecast object represents the daily forecast in the requested weather location.</param>
         [Route("create")]
         [HttpPost]
-        public IActionResult Create(WeatherForecast forecast)
+        public IActionResult CreateWeatherForecasts(WeatherForecast forecast)
         {
             return Ok(forecast);
-        }
-
-        /// <summary>
-        /// Gets List of Weather Forecasts
-        /// </summary>
-        [Route("getwithoutsummary")]
-        [Produces("application/json")]
-        [HttpGet]
-        public async Task<ActionResult<List<WeatherForecast>>> GetWithoutSummary()
-        {
-            var forecasts = await _weather.GetForecastsAsync(false);
-
-            return Ok(forecasts);
         }
     }
 }

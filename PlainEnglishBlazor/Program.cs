@@ -35,6 +35,8 @@ services.AddSwaggerGen(options =>
         },
     });
 
+    options.CustomOperationIds(e => $"{e.ActionDescriptor.RouteValues["action"]}");
+
     options.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
     {
         Name = "Authorization",

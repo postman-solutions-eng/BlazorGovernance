@@ -20,7 +20,7 @@
         "tags": [
           "Weather"
         ],
-        "summary": "Get Weather Forecasts",
+        "summary": "Get Weather Forecast",
         "operationId": "GetWeatherForecasts",
         "responses": {
           "200": {

@@ -11,7 +11,7 @@
 			"name": "Weather",
 			"item": [
 				{
-					"name": "Get Weather Forecast",
+					"name": "Get Weather Forecasts",
 					"id": "da2b176c-70fb-4295-a51e-9a180203e6e7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -482,7 +482,8 @@
 		{
 			"id": "e60501a2-0d22-4253-b419-69136f3cf067",
 			"key": "baseUrl",
-			"value": "https://localhost:61148"
+			"value": "https://localhost:61148",
+			"type": "any"
 		}
 	]
 }

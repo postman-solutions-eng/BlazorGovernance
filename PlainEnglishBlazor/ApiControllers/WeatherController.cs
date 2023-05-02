@@ -19,9 +19,8 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// Gets List of Weather Forecasts
         /// </summary>
         [Route("get")]
+        [Produces("application/json")]
         [HttpGet]
-        [SwaggerResponse(200, "The list of Weather", typeof(List<WeatherForecast>))]
-        [SwaggerResponseExample(200, typeof(WeatherExamples))]
         public async Task<ActionResult<List<WeatherForecast>>> Get()
         {
             var forecasts = await _weather.GetForecastsAsync(false);
@@ -33,7 +32,6 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// Create Weather Forecasts
         /// </summary>
         /// <param name="forecast">The Weather Forecast object represents the daily forecast in the requested weather location.</param>
-        /// <returns>Returns string response</returns>
         [Route("create")]
         [HttpPost]
         public IActionResult Create(WeatherForecast forecast)
@@ -45,6 +43,7 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// Gets List of Weather Forecasts
         /// </summary>
         [Route("getwithoutsummary")]
+        [Produces("application/json")]
         [HttpGet]
         public async Task<ActionResult<List<WeatherForecast>>> GetWithoutSummary()
         {

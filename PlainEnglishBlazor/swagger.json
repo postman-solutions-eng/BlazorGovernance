@@ -20,25 +20,7 @@
           "200": {
             "description": "Success",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                },
-                "example": [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2"}]
-              },
               "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                },
-                "example": [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2"}]
-              },
-              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -119,25 +101,7 @@
           "200": {
             "description": "Success",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                },
-                "example": [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2"}]
-              },
               "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                },
-                "example": [{"id":1,"date":"2023-01-01T00:00:00","temperatureC":32,"temperatureF":89,"summary":"Test"},{"id":2,"date":"2023-01-02T00:00:00","temperatureC":34,"temperatureF":93,"summary":"Test 2"}]
-              },
-              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {

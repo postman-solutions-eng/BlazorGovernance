@@ -157,7 +157,7 @@
           },
           "summary": {
             "maxLength": 300,
-            "minLength": 30,
+            "minLength": 3,
             "type": "string",
             "description": "The summary of the weather (cold, hot)",
             "nullable": true

@@ -26,7 +26,7 @@ namespace PlainEnglishBlazor.Shared.Models
         /// <summary>
         /// The summary of the weather (cold, hot)
         /// </summary>
-        [StringLength(300, MinimumLength = 30)]
+        [StringLength(300, MinimumLength = 3)]
         public string? Summary { get; set; }
     }
 

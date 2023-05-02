@@ -20,6 +20,8 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// </summary>
         [Route("get")]
         [HttpGet]
+        [SwaggerResponse(200, "The list of Weather", typeof(List<WeatherForecast>))]
+        [SwaggerResponseExample(200, typeof(WeatherExamples))]
         public async Task<ActionResult<List<WeatherForecast>>> Get()
         {
             var forecasts = await _weather.GetForecastsAsync(false);

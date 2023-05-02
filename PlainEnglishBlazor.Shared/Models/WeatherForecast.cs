@@ -36,7 +36,7 @@ namespace PlainEnglishBlazor.Shared.Models
         {
             return new List<WeatherForecast>
             {
-                new WeatherForecast { Id = 1, Date = new DateTime(2023, 1, 1), TemperatureC=32, Summary = "Test" },
+                new WeatherForecast { Id = 1, Date = new DateTime(2023, 1, 1), TemperatureC=32, Summary = "Test 1" },
                 new WeatherForecast { Id = 2, Date= new DateTime(2023, 1, 2), TemperatureC=34, Summary = "Test 2" }
             };
         }

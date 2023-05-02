@@ -22,8 +22,4 @@
     <ProjectReference Include="..\PlainEnglishBlazor.Business\PlainEnglishBlazor.Business.csproj" />
     <ProjectReference Include="..\PlainEnglishBlazor.DataAccess\PlainEnglishBlazor.DataAccess.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Config\" />
-  </ItemGroup>
 </Project>

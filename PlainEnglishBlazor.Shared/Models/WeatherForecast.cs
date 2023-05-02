@@ -15,10 +15,13 @@ namespace PlainEnglishBlazor.Shared.Models
         [Required]
         public int TemperatureC { get; set; }
 
+        /// <summary>
+        /// Autocalculated farenheit temperature.
+        /// </summary>
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
         /// <summary>
-        /// The summary of the weather
+        /// The summary of the weather (cold, hot)
         /// </summary>
         [StringLength(300, MinimumLength = 30)]
         public string? Summary { get; set; }

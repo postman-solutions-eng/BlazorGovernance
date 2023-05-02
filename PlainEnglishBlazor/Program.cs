@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PlainEnglishBlazor.Business;
+using PlainEnglishBlazor.Config;
 using PlainEnglishBlazor.Shared.Models;
 using System.Reflection;
 
@@ -59,6 +60,9 @@ services.AddSwaggerGen(options =>
     var modelAssembly = typeof(Error).Assembly;
     var modelsXmlDocPath = Path.Combine(AppContext.BaseDirectory, $"{modelAssembly.GetName().Name}.xml");
     options.IncludeXmlComments(modelsXmlDocPath);
+
+    options.OperationFilter<ErrorOperationFilter>();
+    options.DocumentFilter<CustomDocumentFilter>();
 });
 
 // Application Builder

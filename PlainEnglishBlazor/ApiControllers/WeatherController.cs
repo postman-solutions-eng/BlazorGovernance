@@ -16,7 +16,6 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// <summary>
         /// Gets List of Weather Forecasts
         /// </summary>
-        /// <returns>Returns list of <see cref="WeatherForecast"/>WeatherForecast</returns>
         [Route("get")]
         [HttpGet]
         [ProducesResponseType(typeof(WeatherForecast), 200)]

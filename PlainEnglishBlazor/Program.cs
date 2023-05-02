@@ -18,6 +18,12 @@ services.AddEndpointsApiExplorer();
 services.AddSwaggerGen(options =>
 {
     options.ExampleFilters();
+
+    options.AddServer(new OpenApiServer()
+    {
+        Url = "https://localhost:61148"
+    });
+
     options.SwaggerDoc("v1", new OpenApiInfo { 
         Title = "Postman Example API", 
         Version = "v1", 

@@ -16,7 +16,7 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         }
 
         /// <summary>
-        /// Gets List of Weather Forecasts
+        /// List Weather Forecasts
         /// </summary>
         [Route("get")]
         [Produces("application/json")]

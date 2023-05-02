@@ -9,7 +9,8 @@ namespace PlainEnglishBlazor.Config
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
             // Generic 500
-            operation.Responses.Add("500", new OpenApiResponse { 
+            operation.Responses.Add("500", new OpenApiResponse 
+            { 
                 Description="This is an example of an error response" 
             });
 

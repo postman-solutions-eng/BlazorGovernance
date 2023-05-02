@@ -4,14 +4,15 @@
 <PageTitle>Weather</PageTitle>
 
 <InputDate @bind-Value="saveDate"></InputDate><br />
-<button @onclick="AddDate" type="button" class="btn btn-primary">Add</button>
-<button @onclick="Reload" type="button" class="btn btn-primary">Reload</button>
+
+<button @onclick="AddForecast" type="button" class="btn btn-primary">Add</button>
+<button @onclick="MockForecast" type="button" class="btn btn-primary">Mock</button>
 
 
 <Virtualize Items="forecasts" Context="forecast">
     <ChildContent>
-        <span>@forecast.Date</span><br />
-        <p>@forecast.Id</p>
+        <span>ID: @forecast.Id @forecast.Date</span>
+        <p>@forecast.Summary</p>
     </ChildContent>
 </Virtualize>
 
@@ -25,13 +26,14 @@
         forecasts = await weather.GetForecastsAsync(false);
     }
 
-    private async Task AddDate()
+    private async Task AddForecast()
     {
         var created = await weather.PostForecastAsync(saveDate);
-        forecasts.Add(created);
+        
+        forecasts = await weather.GetForecastsAsync(false);
     }
 
-    private async Task Reload()
+    private async Task MockForecast()
     {
         forecasts = await weather.GetForecastsAsync(true);
     }

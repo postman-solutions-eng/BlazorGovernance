@@ -9,15 +9,14 @@ id = 763ee2c6-c58c-4cd9-b328-ed7753d790d7
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"20467433-a10e163b-d882-4afb-b00f-f50a56b63b5a","path":"Weather Collection.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Example\",\"folderStrategy\":\"Tags\",\"includeAuthInfoInExample\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\"}"}}
 
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
 rootDirectory = PlainEnglishBlazor
 files[] = {"path":"Properties/launchSettings.json","metaData":{}}
-files[] = {"path":"swagger.yaml","metaData":{}}
+files[] = {"path":"swagger.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
-rootFiles[] = swagger.yaml
+rootFiles[] = swagger.json
 type = openapi:3

@@ -20,7 +20,7 @@
         "tags": [
           "Weather"
         ],
-        "summary": "Get Weather Forecast",
+        "summary": "Get Weather Forecasts",
         "operationId": "GetWeatherForecasts",
         "responses": {
           "200": {
@@ -140,7 +140,6 @@
           "website": {
             "type": "string",
             "description": "The URL for the weather. Must be valid.",
-            "format": "uri",
             "nullable": true,
             "example": "https://www.bing.com"
           }

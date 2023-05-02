@@ -27,7 +27,6 @@ namespace PlainEnglishBlazor.Shared.Models
 
         /// <summary>The URL for the weather. Must be valid.</summary>
         /// <example>https://www.bing.com</example>
-        [Url]
         public string? Website { get; set; }
     }
 

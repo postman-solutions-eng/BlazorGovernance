@@ -3,6 +3,7 @@ using Microsoft.OpenApi.Models;
 using PlainEnglishBlazor.Business;
 using PlainEnglishBlazor.Config;
 using PlainEnglishBlazor.Shared.Models;
+using Swashbuckle.AspNetCore.Filters;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ services.AddControllers();
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen(options =>
 {
+    options.ExampleFilters();
     options.SwaggerDoc("v1", new OpenApiInfo { 
         Title = "Postman Example API", 
         Version = "v1", 
@@ -61,9 +63,12 @@ services.AddSwaggerGen(options =>
     var modelsXmlDocPath = Path.Combine(AppContext.BaseDirectory, $"{modelAssembly.GetName().Name}.xml");
     options.IncludeXmlComments(modelsXmlDocPath);
 
+
     options.OperationFilter<ErrorOperationFilter>();
     options.DocumentFilter<CustomDocumentFilter>();
 });
+
+services.AddSwaggerExamplesFromAssemblyOf(typeof(WeatherExamples));
 
 // Application Builder
 var app = builder.Build();

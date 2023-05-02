@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using PlainEnglishBlazor.DataAccess.Database;
 using PlainEnglishBlazor.Shared.Models;
+using RestSharp;
+using System.Text.Json.Serialization;
 
 namespace PlainEnglishBlazor.Business
 {
     public class WeatherForecastService
     {
-        // Used by users logging into our app
         public async Task<WeatherForecast> PostForecastAsync(DateTime startDate)
         {
             var forecast = new WeatherForecast()
@@ -25,14 +27,27 @@ namespace PlainEnglishBlazor.Business
             return forecast;
         }
 
-        // Used by Client Credential Tokens from Controller
-        public async Task<List<WeatherForecast>> GetForecastsAsync()
+        public async Task<List<WeatherForecast>> GetForecastsAsync(bool mock)
         {
+            if (mock)
+            {
+                var options = new RestClientOptions("https://99489eee-902d-4aa1-8559-db39af560a06.mock.pstmn.io")
+                {
+                    MaxTimeout = -1,
+                };
+                var client = new RestClient(options);
+                var request = new RestRequest("/api/Weather/getwithoutsummary", Method.Get);
+                RestResponse response = await client.ExecuteAsync(request);
+                
+                return JsonConvert.DeserializeObject<List<WeatherForecast>>(response.Content!)!;
+            }
+
             using (var context = new ApiContext())
             {
                 var weather = await context.Weather.ToListAsync();
                 return weather;
             }
+
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PlainEnglishBlazor.Shared.Models;
+using Swashbuckle.AspNetCore.Annotations;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace PlainEnglishBlazor.Business.ApiControllers
 {
@@ -18,10 +20,9 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         /// </summary>
         [Route("get")]
         [HttpGet]
-        [ProducesResponseType(typeof(WeatherForecast), 200)]
         public async Task<ActionResult<List<WeatherForecast>>> Get()
         {
-            var forecasts = await _weather.GetForecastsAsync();
+            var forecasts = await _weather.GetForecastsAsync(false);
 
             return Ok(forecasts);
         }
@@ -45,7 +46,7 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         [HttpGet]
         public async Task<ActionResult<List<WeatherForecast>>> GetWithoutSummary()
         {
-            var forecasts = await _weather.GetForecastsAsync();
+            var forecasts = await _weather.GetForecastsAsync(false);
 
             return Ok(forecasts);
         }

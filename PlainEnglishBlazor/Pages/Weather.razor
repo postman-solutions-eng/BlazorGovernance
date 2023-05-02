@@ -1,0 +1,38 @@
+﻿@page "/weather"
+@inject WeatherForecastService weather
+
+<PageTitle>Weather</PageTitle>
+
+<InputDate @bind-Value="saveDate"></InputDate><br />
+<button @onclick="AddDate" type="button" class="btn btn-primary">Add</button>
+<button @onclick="Reload" type="button" class="btn btn-primary">Reload</button>
+
+
+<Virtualize Items="forecasts" Context="forecast">
+    <ChildContent>
+        <span>@forecast.Date</span><br />
+        <p>@forecast.Id</p>
+    </ChildContent>
+</Virtualize>
+
+
+@code {
+    private List<WeatherForecast> forecasts = new();
+    private DateTime saveDate = DateTime.Now;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await weather.GetForecastsAsync(false);
+    }
+
+    private async Task AddDate()
+    {
+        var created = await weather.PostForecastAsync(saveDate);
+        forecasts.Add(created);
+    }
+
+    private async Task Reload()
+    {
+        forecasts = await weather.GetForecastsAsync(true);
+    }
+}

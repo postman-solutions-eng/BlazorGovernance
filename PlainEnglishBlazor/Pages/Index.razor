@@ -1,28 +1,4 @@
 ﻿@page "/"
-@inject WeatherForecastService weather
 
 <PageTitle>Index</PageTitle>
 <h1>Hello, world!</h1>
-
-
-<InputDate @bind-Value="saveDate"></InputDate><br />
-<button @onclick="AddDate" type="button" class="btn btn-primary">Primary</button>
-
-<Virtualize Items="forecasts" Context="forecast">
-    <ChildContent>
-        <span>@forecast.Date</span><br />
-        <p>@forecast.Id</p>
-    </ChildContent>
-</Virtualize>
-
-
-@code {
-    private List<WeatherForecast> forecasts = new();
-    private DateTime saveDate = DateTime.Now;
-
-    private async Task AddDate()
-    {
-        var created = await weather.PostForecastAsync(saveDate);
-        forecasts.Add(created);
-    }
-}

@@ -1,5 +1,7 @@
+using Swashbuckle.AspNetCore.Filters;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.Metrics;
 
 namespace PlainEnglishBlazor.Shared.Models
 {
@@ -7,6 +9,7 @@ namespace PlainEnglishBlazor.Shared.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
         public DateTime Date { get; set; }
 
         /// <summary>
@@ -25,5 +28,17 @@ namespace PlainEnglishBlazor.Shared.Models
         /// </summary>
         [StringLength(300, MinimumLength = 30)]
         public string? Summary { get; set; }
+    }
+
+    public class WeatherExamples : IExamplesProvider<List<WeatherForecast>>
+    {
+        public List<WeatherForecast> GetExamples()
+        {
+            return new List<WeatherForecast>
+            {
+                new WeatherForecast { Id = 1, Date=DateTime.Now, TemperatureC=32, Summary = "Test" },
+                new WeatherForecast { Id = 2, Date=DateTime.Now.AddDays(1), TemperatureC=34, Summary = "Test 2" }
+            };
+        }
     }
 }

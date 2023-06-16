@@ -64,7 +64,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -101,7 +100,6 @@
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -132,7 +130,6 @@
 							"status": "Forbidden",
 							"code": 403,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -163,7 +160,6 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -194,7 +190,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}
@@ -214,16 +209,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"temperatureC\": 32,\n  \"id\": 99598882,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 32,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/api/Weather/create",
 							"host": [
@@ -278,7 +263,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -323,7 +307,6 @@
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -368,7 +351,6 @@
 							"status": "Forbidden",
 							"code": 403,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -413,7 +395,6 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -458,7 +439,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}

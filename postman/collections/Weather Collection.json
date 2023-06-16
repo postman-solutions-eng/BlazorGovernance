@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "9c38b264-f82a-4b55-8ebb-05938566f037",
+		"_postman_id": "48d674b0-42c4-45e7-8a77-cbadd745e7fe",
 		"name": "Weather Collection",
 		"description": "Contact Support:\n Name: Garrett London\n Email: garrett.london@postman.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "20467433-9c38b264-f82a-4b55-8ebb-05938566f037"
+		"_uid": "23315157-48d674b0-42c4-45e7-8a77-cbadd745e7fe"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "Get Weather Forecasts",
-					"id": "da2b176c-70fb-4295-a51e-9a180203e6e7",
+					"id": "4c35a4c1-2098-403a-b9c0-3e1186b76633",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -38,7 +38,7 @@
 					},
 					"response": [
 						{
-							"id": "dd8c333d-fae7-469a-b1f0-03e7aa88de46",
+							"id": "b1a0fea9-7148-4d45-afcb-d31a94b3b9b8",
 							"name": "Success",
 							"originalRequest": {
 								"method": "GET",
@@ -64,6 +64,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -74,7 +75,7 @@
 							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test 1\",\n    \"website\": \"https://www.dotnet.microsoft.com\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\",\n    \"website\": \"https://www.dotnet.microsoft.com\"\n  }\n]"
 						},
 						{
-							"id": "c662b9d9-1e44-4c08-8e34-506633e357f3",
+							"id": "e21282fd-880a-4633-9cfb-4e3831d0122f",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "GET",
@@ -100,11 +101,12 @@
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "fe5d78d2-5bb8-4cf7-ae34-189f8564f078",
+							"id": "2ea8ec73-2f24-4cf9-82bc-a24e91b4a549",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "GET",
@@ -130,11 +132,12 @@
 							"status": "Forbidden",
 							"code": 403,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "1c944bc8-3a5c-4890-ab3e-f585639af01f",
+							"id": "f362f7be-53dd-4517-b2b2-ddd062ffde86",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "GET",
@@ -160,11 +163,12 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "f66a7cb6-17ca-4c98-8bbc-8b07c6b23244",
+							"id": "d2461527-2d4b-44a9-a048-5d77a8ff0cdd",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "GET",
@@ -190,6 +194,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}
@@ -197,7 +202,7 @@
 				},
 				{
 					"name": "Create Weather Forecasts",
-					"id": "f0aafb3e-4d36-4fad-85f8-7176ab99a939",
+					"id": "08796d2c-f714-4237-b9e9-e428b557f5f7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -233,7 +238,7 @@
 					},
 					"response": [
 						{
-							"id": "f5bf525a-340b-47ea-af5a-4cdabb929631",
+							"id": "798b2b5c-8522-44e9-9903-c6ffb38331cf",
 							"name": "Success",
 							"originalRequest": {
 								"method": "POST",
@@ -273,11 +278,12 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "9f340832-f7c4-4280-89ee-a6ab13781964",
+							"id": "2a30c363-928a-44c4-9a47-41cd92e757cf",
 							"name": "Unauthorized",
 							"originalRequest": {
 								"method": "POST",
@@ -317,11 +323,12 @@
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "27876253-8630-423d-90e3-8f4f607b3922",
+							"id": "f0580689-c57e-40f3-95bd-7d81312d7a51",
 							"name": "Forbidden",
 							"originalRequest": {
 								"method": "POST",
@@ -361,11 +368,12 @@
 							"status": "Forbidden",
 							"code": 403,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "0750721b-6339-45a7-ba57-75b96a269ce0",
+							"id": "e783c39f-b0a9-4553-9533-ed8496b872dc",
 							"name": "Not Found",
 							"originalRequest": {
 								"method": "POST",
@@ -405,11 +413,12 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "5646e4a3-532f-4267-9d06-9754ee42b57a",
+							"id": "6577e3f7-9486-492e-ad65-f30eba8de0cb",
 							"name": "This is an example of an error response",
 							"originalRequest": {
 								"method": "POST",
@@ -449,13 +458,14 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}
 					]
 				}
 			],
-			"id": "45a0603e-c261-49dc-9051-85bb5f00c72d"
+			"id": "a375bf50-4903-4bb1-b344-9d79c218d9b2"
 		}
 	],
 	"auth": {

@@ -25,9 +25,6 @@ namespace PlainEnglishBlazor.Shared.Models
         [StringLength(300, MinimumLength = 3)]
         public string? Summary { get; set; }
 
-        /// <summary>The URL for the weather. Must be valid.</summary>
-        /// <example>https://www.bing.com</example>
-        public string? Website { get; set; }
     }
 
     public class WeatherExamples : IExamplesProvider<List<WeatherForecast>>
@@ -41,14 +38,12 @@ namespace PlainEnglishBlazor.Shared.Models
                     Date = new DateTime(2023, 1, 1), 
                     TemperatureC=32, 
                     Summary = "Test 1",
-                    Website = "https://www.dotnet.microsoft.com"
                 },
                 new WeatherForecast { 
                     Id = 2, 
                     Date= new DateTime(2023, 1, 2), 
                     TemperatureC=34, 
                     Summary = "Test 2",
-                    Website = "https://www.dotnet.microsoft.com"
                 }
             };
         }

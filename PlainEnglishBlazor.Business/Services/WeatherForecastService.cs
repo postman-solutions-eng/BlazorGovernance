@@ -12,7 +12,7 @@ namespace PlainEnglishBlazor.Business
         {
             var forecast = new WeatherForecast()
             {
-                Date = startDate,
+                Date = DateTime.Now,
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = "The temperature of Day " + startDate.ToShortDateString()
             };
@@ -30,7 +30,7 @@ namespace PlainEnglishBlazor.Business
         {
             if (mock)
             {
-                var options = new RestClientOptions("https://f319cfe2-4360-4c10-96e7-ee5959af154a.mock.pstmn.io")
+                var options = new RestClientOptions("https://87e32a38-7331-492c-a268-32f2bf4a4a9b.mock.pstmn.io")
                 {
                     MaxTimeout = -1,
                 };

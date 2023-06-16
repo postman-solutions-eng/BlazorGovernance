@@ -25,7 +25,8 @@ services.AddSwaggerGen(options =>
         Url = "https://localhost:61148"
     });
 
-    options.SwaggerDoc("v1", new OpenApiInfo { 
+    options.SwaggerDoc("v1", new OpenApiInfo {
+        Description = "This is a description for my API that will help improve discoverability.",
         Title = "Postman Example API", 
         Version = "v1", 
         Contact = new OpenApiContact

@@ -2,6 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Postman Example API",
+    "description": "This is a description for my API that will help improve discoverability.",
     "contact": {
       "name": "Garrett London",
       "url": "https://example.com/contact",

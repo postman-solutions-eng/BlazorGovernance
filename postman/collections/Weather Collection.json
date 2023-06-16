@@ -64,7 +64,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -101,7 +100,6 @@
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -132,7 +130,6 @@
 							"status": "Forbidden",
 							"code": 403,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -163,7 +160,6 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -194,7 +190,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}
@@ -214,16 +209,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"temperatureC\": 32,\n  \"id\": 99598882,\n  \"date\": \"2023-01-01T00:00:00\",\n  \"temperatureF\": 32,\n  \"summary\": \"This is the summary for the weather\",\n  \"website\": \"https://www.bing.com\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/api/Weather/create",
 							"host": [
@@ -278,7 +263,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -323,7 +307,6 @@
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -368,7 +351,6 @@
 							"status": "Forbidden",
 							"code": 403,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -413,7 +395,6 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -458,7 +439,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						}
@@ -488,9 +468,33 @@
 			}
 		]
 	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0b165450-38e3-4e63-a94d-d13c60baaf81",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "67285cda-2b86-4038-bc6c-1b6457fa06b2",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "e60501a2-0d22-4253-b419-69136f3cf067",
+			"id": "1986a66c-50b7-4697-8725-07c1e3aeb5cb",
 			"key": "baseUrl",
 			"value": "https://localhost:61148",
 			"type": "any"

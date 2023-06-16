@@ -58,7 +58,7 @@
         "tags": [
           "Weather"
         ],
-        "summary": "Create Weather Forecasts",
+        "summary": "Create Weather Forecast",
         "operationId": "CreateWeatherForecasts",
         "requestBody": {
           "description": "The Weather Forecast object represents the daily forecast in the requested weather location.",

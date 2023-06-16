@@ -16,6 +16,7 @@ files[] = {"id":"23315157-48d674b0-42c4-45e7-8a77-cbadd745e7fe","path":"Weather 
 [config.relations.apiDefinition]
 rootDirectory = PlainEnglishBlazor
 files[] = {"path":"d398f4de-cb35-4ad7-a9f2-133a314935d3.json","metaData":{}}
+files[] = {"path":"Properties/launchSettings.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3

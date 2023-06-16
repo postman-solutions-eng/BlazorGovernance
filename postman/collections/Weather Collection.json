@@ -63,7 +63,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "json",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -71,7 +71,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2023-01-01T00:00:00\",\n    \"temperatureC\": 32,\n    \"temperatureF\": 89,\n    \"summary\": \"Test 1\",\n    \"website\": \"https://www.dotnet.microsoft.com\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2023-01-02T00:00:00\",\n    \"temperatureC\": 34,\n    \"temperatureF\": 93,\n    \"summary\": \"Test 2\",\n    \"website\": \"https://www.dotnet.microsoft.com\"\n  }\n]"
+							"body": "[\n  {\n    \"temperatureC\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"date\": \"<dateTime>\",\n    \"temperatureF\": \"<integer>\",\n    \"summary\": \"<string>\"\n  },\n  {\n    \"temperatureC\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"date\": \"<dateTime>\",\n    \"temperatureF\": \"<integer>\",\n    \"summary\": \"<string>\"\n  }\n]"
 						},
 						{
 							"id": "e21282fd-880a-4633-9cfb-4e3831d0122f",
@@ -196,7 +196,7 @@
 					]
 				},
 				{
-					"name": "Create Weather Forecasts",
+					"name": "Create Weather Forecast",
 					"id": "08796d2c-f714-4237-b9e9-e428b557f5f7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true

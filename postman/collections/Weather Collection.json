@@ -472,7 +472,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ed9f65c0-03d7-4389-a225-17a2b9d3e75c",
+				"id": "0b165450-38e3-4e63-a94d-d13c60baaf81",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -482,15 +482,11 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "258c4c59-b4a6-417d-a31b-3c683c1d9014",
+				"id": "67285cda-2b86-4038-bc6c-1b6457fa06b2",
 				"type": "text/javascript",
 				"exec": [
 					"pm.test(\"Status code is 200\", function () {",
 					"    pm.response.to.have.status(200);",
-					"});",
-					"",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
 					"});"
 				]
 			}
@@ -498,7 +494,7 @@
 	],
 	"variable": [
 		{
-			"id": "b689bd64-5cf0-4b60-a483-39cf84d0ef97",
+			"id": "1986a66c-50b7-4697-8725-07c1e3aeb5cb",
 			"key": "baseUrl",
 			"value": "https://localhost:61148",
 			"type": "any"

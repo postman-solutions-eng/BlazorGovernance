@@ -468,9 +468,37 @@
 			}
 		]
 	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ed9f65c0-03d7-4389-a225-17a2b9d3e75c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "258c4c59-b4a6-417d-a31b-3c683c1d9014",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test(\"Response time is less than 200ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(200);",
+					"});"
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "e60501a2-0d22-4253-b419-69136f3cf067",
+			"id": "b689bd64-5cf0-4b60-a483-39cf84d0ef97",
 			"key": "baseUrl",
 			"value": "https://localhost:61148",
 			"type": "any"

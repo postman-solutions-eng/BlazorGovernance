@@ -21,8 +21,8 @@
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="dotnet tool restore" />
-		<Exec Command="dotnet swagger tofile --output ../PlainEnglishBlazor/swagger.json $(OutputPath)PlainEnglishBlazor.dll v1 " />
+		<Exec Command="dotnet swagger tofile --output ../PlainEnglishBlazor/d398f4de-cb35-4ad7-a9f2-133a314935d3.json $(OutputPath)PlainEnglishBlazor.dll v1 " />
 		<Exec Command="postman login --with-api-key $(PostmanAPI)" />
-		<Exec Command="postman api lint ../PlainEnglishBlazor/swagger.json" />
+		<Exec Command="postman api lint ../PlainEnglishBlazor/d398f4de-cb35-4ad7-a9f2-133a314935d3.json" />
 	</Target>
 </Project>

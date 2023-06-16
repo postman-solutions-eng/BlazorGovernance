@@ -29,7 +29,7 @@ namespace PlainEnglishBlazor.Business.ApiControllers
         }
 
         /// <summary>
-        /// Create Weather Forecasts
+        /// Create Weather Forecast
         /// </summary>
         /// <param name="forecast">The Weather Forecast object represents the daily forecast in the requested weather location.</param>
         [Route("create")]
